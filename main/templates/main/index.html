@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<heat>
+    <title>Formulário de pedido de Sorvete</title>
+</head>
+<body>
+    <h1>Formulário de Pedido de Sorvete</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type ="submit" value = "Enviar pedido">
+        </form>
+</body>
+</html>
