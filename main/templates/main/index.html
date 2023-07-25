@@ -1,38 +1,51 @@
 {% extends 'base.html' %}
 
 {% block content %} 
+{% load static %}
 
-<div class="cordefundo">
+<style>
+    body {
+        background-image: url("{% static 'img/fundo.png' %}");
+        
+    }
+</style>
+<div class="cordetitulo">
 
-<body>
-    <div class= "d-flex justify-content-center">
-    <h1 class='titulo'>Sorveteria SENAC-PE</h1>
-    </div>
-    <div class= "d-flex justify-content-center">
-           <form method="post">
-        {% csrf_token %}
-    <div class="tamanhofonte"> 
-    
- 
-        {{ form.as_p }}
-    </div>
-    
-        <input type ="submit" value = "Enviar pedido">
-        </form>
-</div>
-    <div class= "d-flex justify-content-center">
-
-         <a class="btn btn-light" href = "\lista" role="botton"> Clica aqui!</a>
-
-    </div>
+        <div class="d-flex justify-content-center">
+            <h1 class='titulo'>Sorveteria SENAC-PE</h1>
         </div>
-            </div>
-</body>
-    <div class= "d-flex justify-content-center">
-    <label for="teste" placeholder="teste"></label>
-    <input type="text" name="nome" id="nome">
 </div>
-</div>
+  
+        <div class="position-absolute bottom-0 start-0"> 
+
+            <img src="{% static 'img/a2.png' %}" >
+        </div>
+                    
+        <div class="d-flex justify-content-center">
+            <form method="post">
+                {% csrf_token %}
+                <div class="tamanhofonte"> 
+                    {{ form.as_p }}
+                </div>
+                <input type ="submit" value="Enviar pedido" a class="btn btn-primary" href="\lista" role="botton">
+            </form>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-primary" href="\lista" role="botton"> Clica aqui!</a>
+        </div>
+            
+    
+    <div class="d-flex justify-content-center">
+        <label for="teste" placeholder="teste"></label>
+        <input type="text" name="nome" id="nome">
+    </div>
+
+    
+      
+                
+
+
+
+
 </div>
 {% endblock %}
-

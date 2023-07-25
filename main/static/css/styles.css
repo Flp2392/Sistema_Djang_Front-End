@@ -93,17 +93,18 @@ main {
 
 
 .titulo {
-    font-size: 4.0rem; /* Tamanho da fonte */
-    color: #070708; /* Cor do texto */
+    font-size: 3.0rem; /* Tamanho da fonte */
+    color: #fafafd; /* Cor do texto */
     margin-bottom: 1rem; /* Espaçamento na parte inferior do h1 */
     /* Você pode adicionar mais estilos aqui, como font-family, texto em negrito, etc. */
 }
 
-.cordefundo {
-    background-color: rgb(136, 23, 173);
+.cordetitulo {
+    background-color: rgb(97, 6, 100);
 
 
 }
+
   
 .tamanhofonte {
     font-size: 30px;
@@ -111,10 +112,21 @@ main {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 50;
     text-align: center;
     background-color: rgb(97, 6, 100);
     color:#f8f8f8
+
 }
 
-
+.imagemdefundo {
+    background-image: url("{% static 'img/fundo.png' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Você também pode definir a altura da div para garantir que a imagem de fundo cubra toda a página */
+    height: 100vh;
+}
 
